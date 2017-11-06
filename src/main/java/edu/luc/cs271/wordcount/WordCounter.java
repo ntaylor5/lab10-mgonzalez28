@@ -13,8 +13,8 @@ public class WordCounter {
   /** Creates a word counter instance based on the given map. */
   public WordCounter(final Map<String, Integer> theMap) {
 
-    // TODO
-    this.theMap = new Map<String, Integer>();
+    // DONE
+    this.theMap = theMap;
     //this.theMap = null;
 
   }
@@ -22,12 +22,12 @@ public class WordCounter {
   /** Counts the frequencies of all words in the given iterator. */
   public void countWords(final Iterator<String> words) {
 
-    // TODO for each word in the iterator, update the corresponding frequency in the map
+    // DONE for each word in the iterator, update the corresponding frequency in the map
     // HINT to do this without a conditional, use the getOrDefault method
     
-    //words = theMap.iterator();
-    for (String nextElement : words) {
-      words.getCount(nextElement);
+    for (word : words) {
+      theMap.getOrDefault(word, getCount(word)); //OR theMap.getOrDefault(word, 1)
+      
     }
 
 
@@ -36,8 +36,9 @@ public class WordCounter {
   /** Retrieve the frequency of a particular word. */
   public int getCount(final String word) {
 
-    // TODO
-    return theMap.get(word);
+    // DONE
+    int count = theMap.get(word);
+    return count;
     //return -1;
 
   }
