@@ -43,7 +43,7 @@ public class WordCounter {
     int count = 0;
     if (theMap.containsKey(word)) {
       count = theMap.get(word);
-      theMap.put(word, count)
+      theMap.put(word, count);
     }
     else 
       theMap.put(word, 0);

@@ -30,10 +30,10 @@ public class Main {
       for (int i = 0; i < counter.size(); i++) {
         System.out.println(entries(i));
       }
-      else {
-        for (int j = 0; j < counter.size(); j++) {
-          System.out.println(entries.get(i));
-        }
+    }
+    else {
+      for (int j = 0; j < counter.size(); j++) {
+        System.out.println(entries.get(i));
       }
     }
   }
