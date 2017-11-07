@@ -9,7 +9,7 @@ public class Main {
     // set up the scanner so that it separates words based on space and punctuation
     final Scanner input = new Scanner(System.in).useDelimiter("[^\\p{Alnum}]+");
 
-    // TODO complete this main program
+    // DONE complete this main program
     // 1. create a WordCounter instance
     Map<String, Integer> map = new HashMap<>();
     WordCounter counter = new WordCounter(map);

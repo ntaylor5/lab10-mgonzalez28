@@ -25,6 +25,7 @@ public class WordCounter {
     int count = 0;
     while (words.hasNext()) {
       String temp = words.next();
+      temp.toLowerCase();
       if (theMap.containsKey(temp)) {
         count = theMap.get(temp);
         theMap.put(temp, count + 1);
@@ -35,13 +36,13 @@ public class WordCounter {
   /** Retrieve the frequency of a particular word. */
   public int getCount(final String word) {
 
-    // Done
-    if (theMap.get(word) == null) {
-      return -1;
-    } else {
-      int count = theMap.get(word);
-      return count;
-    }
+    // DONE
+    int count = 0;
+    if (theMap.containsKey(word)) {
+      count = theMap.get(word);
+      theMap.put(word, count);
+    } else theMap.put(word, 0);
+    return count;
   }
 
   /** Retrieve the map representing all word frequencies. */
@@ -50,15 +51,4 @@ public class WordCounter {
   }
 }
 
-/*
-public int getCount(final String word) {
 
-   // DONE
-   int count = 0;
-   if (theMap.containsKey(word)) {
-     count = theMap.get(word);
-     theMap.put(word, count);
-   } else theMap.put(word, 0);
-   return count;
- }
- */
