@@ -15,7 +15,7 @@ public class WordCounter {
 
     // DONE
     this.theMap = theMap;
-    //this.theMap = null;
+   
 
   }
 
@@ -26,7 +26,7 @@ public class WordCounter {
     // HINT to do this without a conditional, use the getOrDefault method
     
     for (word : words) {
-      theMap.getOrDefault(word, getCount(word)); //OR theMap.getOrDefault(word, 1)
+      theMap.getOrDefault(word, getCount(word)); 
       
     }
 
@@ -39,7 +39,7 @@ public class WordCounter {
     // DONE
     int count = theMap.get(word);
     return count;
-    //return -1;
+   
 
   }
 

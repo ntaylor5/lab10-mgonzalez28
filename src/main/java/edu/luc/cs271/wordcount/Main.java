@@ -18,7 +18,23 @@ public class Main {
     // 6. sort the ArrayList in descending order by count
     //    using Collections.sort and an instance of the provided comparator (after fixing the latter)
     // 7. print the (up to) ten most frequent words in the text
-   final Map<String, Integer> map = new HashMap<>();
+    Map<String, Integer> map = new HashMap<>();
+   List<counter> list = new ArrayList<counter>();
+   WordCounter counter = new WordCounter();
+   
+   while(input.hasNext()) {
+     String key = input.nextLine();
+     if (key != null) {
+       list.add(key);
+       map.put(key, 0);
+     }
+   }
+   
+   Iterator itr = list.iterator();
+   counter.countWords(itr);
+   
+   
+  
    
    
 
