@@ -14,25 +14,25 @@ public class Main {
     Map<String, Integer> map = new HashMap<>();
     WordCounter counter = new WordCounter(map);
     // 2. use this to count the words in the input
-    WordCounter.countWords(input);
+    counter.countWords(input);
     // 3. determine the size of the resulting map
-    int size = counter.size();
+    int size = counter.getCounts().size();
     // 4. create an ArrayList of that size and
     // 5. store the map's entries in it (these are of type Map.Entry<String, Integer>
     List<Map.Entry<String, Integer>> entries = new ArrayList<>(size);
-     entries.addAll(counter.entrySet());
+    entries.addAll(counter.getCounts().entrySet());
     // 6. sort the ArrayList in descending order by count
-    //    using Collections.sort and an instance of the provided comparator (after fixing the latter)
-   Collections.sort(entries, new DescendingByCount());
+    //    using Collections.sort and an instance of the provided comparator (after fixing the
+    // latter)
+    Collections.sort(entries, new DescendingByCount());
     // 7. print the (up to) ten most frequent words in the text
-    
-    if (couner.size() < 11) {
-      for (int i = 0; i < counter.size(); i++) {
-        System.out.println(entries(i));
+
+    if (counter.getCounts().size() < 11) {
+      for (int i = 0; i < counter.getCounts().size(); i++) {
+        System.out.println(entries.get(i));
       }
-    }
-    else {
-      for (int j = 0; j < counter.size(); j++) {
+    } else {
+      for (int i = 0; i < 10; i++) {
         System.out.println(entries.get(i));
       }
     }
